@@ -206,6 +206,30 @@ body {
 	width:50px;
 	height:auto;
 }
+.min img:hover
+{
+	transform:scale(1.1)
+}
+Tablettes /
+@media (max-width: 768px) {
+  .mi {
+    gap: 15px;
+  }
+  .min img {
+    width: 50px;         / icônes plus petites /
+  }
+}
+
+/ Smartphones /
+@media (max-width: 480px) {
+  .mi {
+    flex-direction: column; / icônes en colonne /
+    align-items: center;
+  }
+  .min img {
+    width: 40px;         / encore plus petit sur mobile /
+  }
+}
 
 /* Pied de page */
 footer {

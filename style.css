@@ -143,13 +143,66 @@ body {
   color: white;
   padding: 20px;
   background: rgba(0,0,0,0.6);
+  text-align: center;
 }
-form#avis textarea {
+
+#avis h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00ffff; /* cohérent avec ton logo */
+}
+
+#avis form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#avis label {
+  text-align: left;
+  font-weight: bold;
+  color: #ff6600; /* orange vif */
+}
+
+#avis textarea {
   width: 100%;
   min-height: 40px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  padding: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  resize: vertical;
 }
+
+#avis button {
+  background-color: #1e3c72; /* bleu foncé */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#avis button:hover {
+  background-color: #16325c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #avis h2 { font-size: 24px; }
+  #avis form { max-width: 90%; }
+}
+
+@media (max-width: 480px) {
+  #avis h2 { font-size: 20px; }
+  #avis textarea { min-height: 30px; }
+  #avis button { padding: 10px 20px; font-size: 14px; }
+}
+
 
 /* Pied de page */
 footer {

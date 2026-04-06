@@ -1,118 +1,175 @@
-/* Reset */
-body, h1, h2, p, ul {
-  margin: 0;
-  padding: 0;
-}
+/* Style général */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+}
+
+/* Bannière */
+.banner {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #1e3c72, #9b59b6);
+}
+.log img {
+  width: 20%;
+  vertical-align: middle;
+}
+.logo {
+  font-size: 50px;
+  margin: 20px 0 10px;
+}
+.logo span {
+  color: #00ffff;
+}
+.welcome {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.tagline {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.values {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+/* Bouton principal */
+.cta-button {
+  background-color: #ff6600;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #e65c00;
+}
+
+/* Section Boutique */
+.shop-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
   color: #333;
 }
-
-/* Header */
-header.banner {
-  text-align: center;
-  padding: 20px;
-  background: #222;
-  color: white;
-}
-header .log img {
-  max-width: 120px;
-  height: auto;
-}
-header h1 {
-  font-size: 2rem;
-}
-header h2 {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-.cta-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ff6600;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* Produits */
-.shop-section {
-  padding: 40px 20px;
-  text-align: center;
+.shop-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1e3c72;
 }
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  gap: 30px;
 }
 .product-card {
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 190px;
+  padding: 20px;
   text-align: center;
+  transition: transform 1s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
 }
 .product-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.product-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #002060;
 }
 .price {
-  font-weight: bold;
-  margin: 10px 0;
+  font-size: 18px;
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+.product-card button {
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.product-card button:hover {
+  background-color: #16325c;
 }
 
 /* Contact */
 #contact {
-  padding: 30px;
-  text-align: center;
-  background: #eee;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
 }
 .mi {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 .min img {
-  width: 50px;
+  width: 70px;
   height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 30px;
+}
+.min img:hover {
+  transform: scale(1.1);
 }
 
 /* Avis */
-form#avis {
-  max-width: 400px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+#avis {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
 }
-form textarea {
+form#avis textarea {
   width: 100%;
   min-height: 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* Footer */
+/* Pied de page */
 footer {
-  text-align: center;
+  background-color: #111;
   padding: 20px;
-  background: #222;
+  font-size: 14px;
   color: white;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  header h1 { font-size: 1.5rem; }
+  .logo { font-size: 36px; }
+  .welcome { font-size: 24px; }
   .product-card { width: 45%; }
+  .min img { width: 60px; padding: 20px; }
 }
 
 @media (max-width: 480px) {
-  header h1 { font-size: 1.2rem; }
+  .logo { font-size: 28px; }
+  .welcome { font-size: 20px; }
   .product-card { width: 100%; }
-  .min img { width: 40px; }
+  .min img { width: 50px; padding: 10px; }
 }

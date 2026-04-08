@@ -175,6 +175,10 @@ body {
   font-family: 'Segoe UI', sans-serif;
   resize: vertical;
 }
+avis textarea:focus
+{
+  outline: none;
+}
 
 #avis button {
   background-color: #1e3c72; /* bleu foncé */

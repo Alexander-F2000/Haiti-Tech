@@ -7,6 +7,11 @@ body {
   text-align: center;
 }
 
+body:focus
+{
+  outline: none;
+}
+
 /* Bannière */
 .banner {
   padding: 60px 20px;
@@ -214,6 +219,11 @@ footer {
   padding: 20px;
   font-size: 14px;
   color: white;
+}
+
+footer:focus
+{
+  outline: none;
 }
 
 /* Responsive */
